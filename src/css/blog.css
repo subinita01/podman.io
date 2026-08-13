@@ -1,0 +1,110 @@
+/* ---------------------------------- */
+/* Docusaurus classic blog (/blogs/*) */
+/* ---------------------------------- */
+
+.blog-wrapper article {
+  @apply mb-12 border-0 border-b border-solid border-gray-100 pb-10 last:border-0 dark:border-gray-700;
+}
+
+.blog-wrapper article header h1,
+.blog-wrapper article header h2 {
+  @apply mb-3 leading-tight text-gray-900 dark:text-gray-50;
+}
+
+.blog-wrapper article header h2 a {
+  @apply font-display font-bold text-gray-900 no-underline hover:text-purple-700 dark:text-gray-50 dark:hover:text-purple-300;
+}
+
+.blog-wrapper article header time,
+.blog-wrapper .avatar__subtitle {
+  @apply text-base text-gray-500 dark:text-gray-300;
+}
+
+.blog-wrapper .avatar__name {
+  @apply text-lg;
+}
+
+.blog-wrapper .markdown {
+  @apply max-w-none;
+}
+
+.blog-wrapper .markdown p,
+.blog-wrapper .markdown li {
+  @apply text-lg leading-relaxed text-gray-900 dark:text-gray-100;
+}
+
+.blog-wrapper .markdown ul,
+.blog-wrapper .markdown ol {
+  @apply my-4 pl-8;
+}
+
+.blog-wrapper .markdown ul {
+  @apply list-disc;
+}
+
+.blog-wrapper .markdown ol {
+  @apply list-decimal;
+}
+
+.blog-wrapper .markdown h1,
+.blog-wrapper .markdown h2,
+.blog-wrapper .markdown h3,
+.blog-wrapper .markdown h4 {
+  @apply mb-3 mt-8 text-gray-900 dark:text-gray-50;
+}
+
+.blog-wrapper .markdown a {
+  @apply text-blue-900 dark:text-blue-500 dark:hover:text-blue-300;
+}
+
+.blog-wrapper .markdown blockquote {
+  @apply border-0 border-l-4 border-solid border-purple-700 bg-gray-50 px-6 py-3 text-gray-900 dark:border-purple-300 dark:bg-gray-700 dark:text-gray-100;
+}
+
+.blog-wrapper .markdown img {
+  @apply my-4 max-w-full rounded;
+}
+
+.blog-wrapper .markdown table {
+  @apply my-6 block overflow-x-auto;
+}
+
+/* code */
+.blog-wrapper .markdown code {
+  @apply rounded bg-gray-50 px-1 py-0.5 text-base text-purple-900 dark:bg-gray-700 dark:text-purple-300;
+}
+
+.blog-wrapper .markdown pre,
+.blog-wrapper .markdown pre code {
+  @apply text-base;
+}
+
+.blog-wrapper .markdown pre code {
+  @apply bg-transparent p-0 text-current;
+}
+
+.blog-wrapper .theme-code-block {
+  @apply my-6;
+}
+
+/* navigation, tags and table of contents */
+.blog-wrapper .pagination-nav__link {
+  @apply border-gray-100 no-underline dark:border-gray-700;
+}
+
+.blog-wrapper .pagination-nav__label {
+  @apply text-gray-900 dark:text-gray-50;
+}
+
+.blog-wrapper .pagination-nav__sublabel {
+  @apply text-gray-500 dark:text-gray-300;
+}
+
+.blog-wrapper .table-of-contents__link,
+.blog-wrapper [class*='tag_'] {
+  @apply text-base no-underline;
+}
+
+.blog-wrapper .table-of-contents__link--active {
+  @apply font-semibold text-purple-700 dark:text-purple-300;
+}

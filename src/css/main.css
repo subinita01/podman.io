@@ -5,6 +5,7 @@
 @import 'fonts/montserrat.css';
 @import 'fonts/source-sans-pro.css';
 @import 'fonts/source-code-pro.css';
+@import 'blog.css';
 
 :root {
   --ifm-color-primary: #892ca0;
