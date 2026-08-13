@@ -2,6 +2,7 @@ import { LATEST_VERSION, LATEST_DESKTOP_VERSION } from '@site/static/data/global
 const operatingSystemData = [
   {
     id: 'windows',
+    label: 'Windows',
     preferred:{
       title: 'Podman Desktop for Windows',
       subtitle: `Windows Installer v-${LATEST_DESKTOP_VERSION}`,
@@ -30,6 +31,7 @@ const operatingSystemData = [
   },
   {
     id: 'mac',
+    label: 'macOS',
     preferred: {
       title: 'Podman Desktop for macOS',
       subtitle: `Universal *.dmg v-${LATEST_DESKTOP_VERSION}`,
@@ -50,6 +52,7 @@ const operatingSystemData = [
   },
   {
     id: 'linux',
+    label: 'Linux',
     preferred: {
       title: 'Podman CLI for Linux',
       subtitle: `Podman Engine v${LATEST_VERSION}`,
@@ -68,4 +71,18 @@ const operatingSystemData = [
     },
   },
 ];
+export const detectOperatingSystem = (): string => {
+  const userAgent = window.navigator.userAgent.toLowerCase().split(' ');
+  if (userAgent.find(item => item.includes('windows'))) {
+    return 'windows';
+  } else if (userAgent.find(item => item.includes('macintosh'))) {
+    return 'mac';
+  }
+  return 'linux';
+};
+
+export function returnOperatingSystemData() {
+  return operatingSystemData.find(os => os.id === detectOperatingSystem());
+}
+
 export default operatingSystemData;
