@@ -41,6 +41,15 @@ const config = {
         path: './release',
       },
     ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'meeting-notes',
+        path: './static/data/meetings/notes',
+        routeBasePath: 'community/meetings',
+        include: ['*/index.md'],
+      },
+    ],
   ],
   presets: [
     [

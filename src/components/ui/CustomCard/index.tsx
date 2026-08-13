@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Button from '@site/src/components/utilities/Button/';
 import Markdown from '@site/src/components/utilities/Markdown';
 import FilmIcon from '../../shapes/FilmIcon';
@@ -6,13 +6,11 @@ import FilmIcon from '../../shapes/FilmIcon';
 type SubcardButtonProps = {
   text: string;
   path?: string;
-  markDown?: ReactNode;
 };
 
 type CardInfoButtonProps = {
   data: SubcardButtonProps[];
   primary: Boolean;
-  method: Function;
 };
 
 function CardHeader(props) {
@@ -40,37 +38,14 @@ function CardBody(props) {
 // CardInfoButtons component is the same as CardButtons but this component has both button secondary
 // There is a 'CardButtons' mode which can be attained by passing parimary flag as true
 function CardInfoButtons(cardInfoButtonProps: CardInfoButtonProps) {
-  const {
-    data = [{ text: 'button text', markDown: <>No MarkDown to Display!</> }],
-    primary = false,
-    method = () => {
-      console.error('No callback method passed');
-    },
-  } = cardInfoButtonProps;
+  const { data = [{ text: 'button text' }], primary = false } = cardInfoButtonProps;
   return (
     <div className="align-center mb-4 mt-8 flex flex-row flex-wrap justify-center gap-4 lg:mb-8 2xl:px-10">
-      {primary
-        ? data.map((button, index) => (
-            <div key={index}>
-              {index == 0 ? <Button as="link" {...button} /> : <Button as="link" outline={true} {...button} />}
-            </div>
-          ))
-        : data.map((button, index) => (
-            <div key={index}>
-              {index == 0 ? (
-                <Button as="link" outline={true} {...button} />
-              ) : (
-                <Button
-                  as="button"
-                  method={() => {
-                    method(button);
-                  }}
-                  outline={true}
-                  {...button}
-                />
-              )}
-            </div>
-          ))}
+      {data.map((button, index) => (
+        <div key={index}>
+          <Button as="link" outline={!primary || index > 0} {...button} />
+        </div>
+      ))}
     </div>
   );
 }

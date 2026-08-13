@@ -1977,7 +1977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/plugin-content-pages@npm:2.4.3":
+"@docusaurus/plugin-content-pages@npm:2.4.3, @docusaurus/plugin-content-pages@npm:^2.4.1":
   version: 2.4.3
   resolution: "@docusaurus/plugin-content-pages@npm:2.4.3"
   dependencies:
@@ -9684,6 +9684,7 @@ __metadata:
     "@docusaurus/eslint-plugin": ^2.4.1
     "@docusaurus/module-type-aliases": ^2.4.1
     "@docusaurus/plugin-content-blog": ^2.4.1
+    "@docusaurus/plugin-content-pages": ^2.4.1
     "@docusaurus/preset-classic": ^2.4.1
     "@docusaurus/theme-live-codeblock": ^2.4.1
     "@iconify/react": ^4.0.1
