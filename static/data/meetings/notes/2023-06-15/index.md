@@ -19,7 +19,7 @@ Meeting start 11:02 a.m. Thursday, June 15, 2023
 
 ### Additional Layer Storage (ALS) (0:57 in the video) - Gerry Seidman
 
-[Slides](./AuriStor-ACA-PodmanCabal.pdf)
+Slides (not archived with these notes)
 
 What is AuriStorFS
 Framing the Problem ACA Solves

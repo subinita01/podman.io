@@ -16,7 +16,7 @@ Started out with general discussion of the meetings purpose going forward. We th
 
 #### (9:50 in the video)
 
-`podman image scp` - Ed Santiago wanted an easy way to move stuff from container storage to container storage. Charlie Doern originally created a PR and after discussion, a number of options were discussed (see [slides](./Podman_Image_SCP.pdf))
+`podman image scp` - Ed Santiago wanted an easy way to move stuff from container storage to container storage. Charlie Doern originally created a PR and after discussion, a number of options were discussed (slides not archived with these notes)
 
 Two thoughts are towards sticking with `podman image scp`. This is doable now with bash scripting, but Dan would like it as a part of command line interface.
 
