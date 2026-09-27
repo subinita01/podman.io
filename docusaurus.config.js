@@ -33,7 +33,8 @@ const config = {
         },
       };
     },
-    ['@docusaurus/plugin-content-blog',
+    [
+      '@docusaurus/plugin-content-blog',
       {
         showReadingTime: true,
         routeBasePath: 'release',
@@ -81,8 +82,7 @@ const config = {
           { to: 'get-started', label: 'Get Started', position: 'right' },
           { to: 'community', label: 'Community', position: 'right' },
           {
-            to: 'https://blog.podman.io',
-            target: '_self',
+            href: 'https://blog.podman.io',
             label: 'Development Blog',
             position: 'right',
           },
@@ -94,8 +94,7 @@ const config = {
           },
 
           {
-            to: 'https://github.com/containers/',
-            target: '_self',
+            href: 'https://github.com/containers/',
             label: 'GitHub',
             position: 'right',
           },
@@ -152,7 +151,7 @@ const config = {
             items: [
               {
                 label: 'Podman GitHub',
-                href: 'https://github.com/podman-container-tools/podman',
+                href: 'https://github.com/containers/podman',
               },
               {
                 label: 'Podman Desktop GitHub',
