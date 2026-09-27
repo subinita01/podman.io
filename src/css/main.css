@@ -28,10 +28,6 @@
   @apply -my-2;
 }
 
-.menu__list {
-  @apply mt-10;
-}
-
 .navbar__brand {
   display: inline-flex !important;
   align-items: center !important;
@@ -45,31 +41,30 @@
 .navbar__title,
 .navbar__title.text--truncate {
   font-family: Montserrat, sans-serif;
-  font-weight: 600 !important;
+  font-weight: 600;
   padding: 4px 0px;
-  letter-spacing: -0.5px !important;
-  font-kerning: normal !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
-  white-space: nowrap !important;
-  max-width: none !important;
-  flex-shrink: 0 !important;
-  font-size: clamp(1.75rem, 2.4vw, 2.5rem) !important;
-  line-height: 1.2 !important;
+  letter-spacing: -0.5px;
+  font-kerning: normal;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+  max-width: none;
+  flex-shrink: 0;
+  line-height: 1.2;
+  @apply text-2xl lg:text-3xl;
 }
 
-#__docusaurus > nav > div.navbar__inner > div:nth-child(1) > a > b {
+.navbar__title b {
   font-size: inherit;
   line-height: inherit;
-  overflow: visible !important;
-  text-overflow: clip !important;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .navbar__logo {
-  height: clamp(3.5rem, 5vw, 5.25rem);
+  height: 3rem;
   aspect-ratio: 266 / 253;
   width: auto;
-  min-width: calc(3.5rem * 266 / 253);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -95,7 +90,7 @@
 }
 
 .navbar--fixed-top {
-  height: 7rem;
+  height: 4rem;
 }
 
 .navbar__title,
@@ -104,8 +99,12 @@
   @apply text-white dark:text-gray-50;
 }
 
+.navbar__link,
+.clean-btn {
+  @apply text-lg lg:text-xl;
+}
+
 .navbar__link {
-  font-size: clamp(1.05rem, 1.2vw, 1.25rem);
   padding: 0.5rem 0.65rem;
 }
 
@@ -130,7 +129,7 @@
 }
 
 .footer a {
-  @apply text-blue-50 no-underline hover:text-blue-300 dark:hover:text-blue-500;
+  @apply text-blue-50 no-underline hover:text-blue-300 dark:hover:text-blue-300;
 }
 
 .footer__copyright p {
@@ -153,7 +152,12 @@
 }
 
 .navbar__link--active {
-  @apply text-purple-300 underline dark:text-purple-300 dark:underline;
+  @apply font-semibold text-white underline decoration-2 underline-offset-4 dark:text-white;
+}
+
+.theme-doc-markdown a,
+.markdown a {
+  @apply font-text text-lg text-blue-500 underline underline-offset-4 transition duration-150 ease-linear hover:opacity-90 dark:text-blue-500 dark:hover:text-blue-700 lg:text-xl;
 }
 
 /* ------------------ */
@@ -185,10 +189,6 @@
   code,
   pre {
     @apply font-mono text-lg dark:text-gray-100 lg:text-xl;
-  }
-
-  a {
-    @apply font-text text-lg text-blue-500 underline underline-offset-4 transition duration-150 ease-linear hover:opacity-90 dark:text-blue-500 dark:hover:text-blue-700 lg:text-xl;
   }
 
   /* headings size and weight */
